@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-2.0-only
+config SECURITY_LKRG
+	tristate "LKRG support"
+	depends on SECURITY && KPROBES && MODULE_UNLOAD && KALLSYMS_ALL
+	default m
+	help
+	  This selects LKRG - Linux Kernel Runtime Guard, which provides
+          integrity validation and anti-exploitation functions.
+
+	  If you are unsure how to answer this question, answer M.
